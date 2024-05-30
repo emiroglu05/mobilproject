@@ -5,13 +5,88 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#03A9F4"
     tools:context=".YeniUrunKaydi_34">
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="35dp"
         android:text="YENİ ÜRÜN KAYDI"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="38dp" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtUrunNo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUrunNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Ürün No"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/txtUrunAdi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="Ürün Adını Giriniz"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtUrunNo"
+        app:layout_constraintTop_toBottomOf="@+id/txtUrunNo" />
+
+    <EditText
+        android:id="@+id/txtModelKodu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:hint="Ürün Model Kodunu Giriniz"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtSiparisAdedi"
+        app:layout_constraintStart_toStartOf="@+id/txtSiparisAdedi" />
+
+    <EditText
+        android:id="@+id/txtSiparisAdedi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="111dp"
+        android:ems="10"
+        android:hint="Sipariş Adedini Giriniz"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUrunAdi" />
+
+    <Button
+        android:id="@+id/btnVeriKayit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:onClick="verikayit"
+        android:text="Kaydet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSiparisAdedi" />
+
+    <Button
+        android:id="@+id/btngrdn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="133dp"
+        android:onClick="btngrdn"
+        android:text="Kayıt Listeleme Sayfasına Geri Dön"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
